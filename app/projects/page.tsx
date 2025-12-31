@@ -19,10 +19,10 @@ export default function AllProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Header */}
-      <section className="pt-35 pb-20 px-6">
+      <section className="pt-35 pb-20 px-6" data-aos="fade-up">
         <div className="container mx-auto max-w-7xl">
           <div className="max-w-4xl">
-            <h1 className="text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
               All Projects
             </h1>
 
@@ -78,7 +78,7 @@ export default function AllProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6" data-aos="fade-up" data-aos-delay="200">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {filteredProjects.map((project, index) => (

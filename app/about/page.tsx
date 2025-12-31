@@ -14,7 +14,7 @@ export default function AboutMePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-orange-50/50 to-white overflow-hidden">
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-orange-50/50 to-white overflow-hidden" data-aos="fade-up">
         {/* Decorative Elements */}
         <div className="absolute top-20 right-10 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-100/30 rounded-full blur-3xl" />
@@ -124,7 +124,7 @@ export default function AboutMePage() {
       </section>
 
       {/* Education Section */}
-      <section className="py-32 px-6 bg-white">
+      <section className="py-32 px-6 bg-white" data-aos="fade-up" data-aos-delay="200">
         <div className="container mx-auto max-w-7xl">
           {/* Editorial Header */}
           <div className="mb-24">
@@ -133,7 +133,7 @@ export default function AboutMePage() {
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Academic Journey
                 </p>
-                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">
                   Education
                 </h2>
               </div>
@@ -200,7 +200,7 @@ export default function AboutMePage() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white">
+      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white" data-aos="fade-up" data-aos-delay="100">
         <div className="container mx-auto max-w-7xl">
           {/* Editorial Header */}
           <div className="mb-24">
@@ -209,7 +209,7 @@ export default function AboutMePage() {
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Leadership & Involvement
                 </p>
-                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">
                   Experience
                 </h2>
               </div>
@@ -271,7 +271,7 @@ export default function AboutMePage() {
       </section>
 
       {/* Highlights Section */}
-      <section className="py-32 px-6 bg-white">
+      <section className="py-32 px-6 bg-white" data-aos="fade-up" data-aos-delay="200">
         <div className="container mx-auto max-w-7xl">
           {/* Editorial Header */}
           <div className="mb-24">
@@ -280,7 +280,7 @@ export default function AboutMePage() {
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Achievements
                 </p>
-                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">
                   Highlights
                 </h2>
               </div>

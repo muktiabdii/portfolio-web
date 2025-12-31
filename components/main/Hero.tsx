@@ -27,15 +27,11 @@ export default function Hero() {
           className="absolute top-40 right-20 w-3 h-3 bg-orange-300 rounded-full animate-pulse"
           style={{ animationDelay: "75ms" }}
         />
-        <div
-          className="absolute bottom-20 left-1/4 w-2 h-2 bg-orange-500 rounded-full animate-pulse"
-          style={{ animationDelay: "150ms" }}
-        />
       </div>
 
       <div className="container mx-auto max-w-7xl">
         <div
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50/70 via-white to-orange-50/30 p-12 shadow-xl hover:shadow-2xl transition-all duration-500"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50/70 via-white to-orange-50/30 p-6 md:p-12 shadow-xl hover:shadow-2xl transition-all duration-500"
           onMouseMove={handleMouseMove}
         >
           {/* Dynamic glow effect */}
@@ -69,10 +65,10 @@ export default function Hero() {
               </div>
 
               <div className="space-y-2">
-                <h1 className="text-6xl font-bold text-gray-900 mb-2">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
                   I&apos;m Abdi,
                 </h1>
-                <h1 className="text-6xl font-bold bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent">
                   Mobile Developer
                 </h1>
                 <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />

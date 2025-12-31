@@ -18,7 +18,7 @@ export default function Projects() {
               <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                 Selected Works
               </p>
-              <h2 className="text-7xl font-bold text-gray-900 tracking-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">
                 Projects
               </h2>
             </div>
@@ -92,7 +92,7 @@ export default function Projects() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+                    <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
                       {project.title}
                     </h3>
 

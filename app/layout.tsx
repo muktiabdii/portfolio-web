@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/main/Header";
 import CTASection from "@/components/main/CTA";
+import AOSInit from "@/components/AOSInit";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -35,6 +36,9 @@ export default function RootLayout({
       >
         {/* Header (fixed) */}
         <Header />
+
+        {/* AOS Initialization */}
+        <AOSInit />
 
         {/* Main Content */}
         <main>

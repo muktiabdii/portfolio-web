@@ -8,17 +8,29 @@ import TechStackSection from '../components/main/TechStack'
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <Hero />
+      <div data-aos="fade-up">
+        <Hero />
+      </div>
 
-      <Introduction />
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Introduction />
+      </div>
 
-      <Projects />
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Projects />
+      </div>
 
-      <Skills />
+      <div data-aos="fade-up" data-aos-delay="200">
+        <Skills />
+      </div>
 
-      <Testimonials />
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Testimonials />
+      </div>
 
-      <TechStackSection />
+      <div data-aos="fade-up" data-aos-delay="200">
+        <TechStackSection />
+      </div>
     </main>
   )
 }
