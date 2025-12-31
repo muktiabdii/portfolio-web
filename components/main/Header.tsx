@@ -51,7 +51,7 @@ export default function Header() {
 
             {/* Resume */}
             <Link
-              href="https://drive.google.com/file/d/1aWGMQksi-o-4tu9yeazs4cZpbFgJsrfo/view?usp=sharing"
+              href="https://drive.google.com/file/d/1re-Nap5dYh-XlGvvohu2q3iM6YmCzKl4/view?usp=drive_link"
               target="_blank"
               className="text-lg font-medium text-gray-700 hover:text-orange-500 transition"
             >

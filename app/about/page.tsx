@@ -111,7 +111,7 @@ export default function AboutMePage() {
                   GitHub
                 </Link>
                 <Link
-                  href="https://drive.google.com/file/d/1aWGMQksi-o-4tu9yeazs4cZpbFgJsrfo/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1re-Nap5dYh-XlGvvohu2q3iM6YmCzKl4/view?usp=drive_link"
                   target="_blank"
                   className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-orange-500 hover:bg-orange-50 transition-all duration-300"
                 >
