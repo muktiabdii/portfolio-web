@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../components/main/Header";
-import CTASection from "../../components/main/CTA";
 import { projects as allProjects } from "@/data/projects";
 
 const categories = ["All", "Mobile Development", "Web Development"];
@@ -187,8 +185,6 @@ export default function AllProjectsPage() {
           )}
         </div>
       </section>
-
-      <CTASection />
     </div>
   );
 }

@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../components/main/Header";
-import CTASection from "../../components/main/CTA";
 import { projects } from "@/data/projects";
 import { educations } from "@/data/educations";
 import { experiences } from "@/data/experiences";
@@ -113,7 +111,7 @@ export default function AboutMePage() {
                   GitHub
                 </Link>
                 <Link
-                  href="/resume.pdf"
+                  href="https://drive.google.com/file/d/1aWGMQksi-o-4tu9yeazs4cZpbFgJsrfo/view?usp=sharing"
                   target="_blank"
                   className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-orange-500 hover:bg-orange-50 transition-all duration-300"
                 >
@@ -334,9 +332,6 @@ export default function AboutMePage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <CTASection />
     </div>
   );
 }
