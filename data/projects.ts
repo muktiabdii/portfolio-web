@@ -167,13 +167,13 @@ export const projects: Project[] = [
 
     keyFeatures: [
       {
-        title: "Voice Emotion Analysis",
+        title: "Voice Recognition & Analysis",
         description:
           "Analyzes voice input to detect emotional stress and potential mental health risks in postpartum mothers.",
         icon: "🎙️",
       },
       {
-        title: "Emergency Alert System",
+        title: "Emergency Alert",
         description:
           "Triggers alerts and critical warnings when high risk emotional states are detected.",
         icon: "🚨",
@@ -538,13 +538,13 @@ export const projects: Project[] = [
 
     keyFeatures: [
       {
-        title: "Image-Based Diabetes Screening",
+        title: "AI Screening",
         description:
           "Detects early diabetes risk through AI analysis of nail and tongue images using deep learning models.",
         icon: "🖼️",
       },
       {
-        title: "Health History Tracking",
+        title: "Examination History",
         description:
           "Stores and visualizes screening history to help users monitor long-term risk trends.",
         icon: "📊",
@@ -556,16 +556,16 @@ export const projects: Project[] = [
         icon: "🤖",
       },
       {
-        title: "Nearby Healthcare Discovery",
+        title: "Nearby Health Facilities",
         description:
           "Helps users find nearby doctors and healthcare facilities using map-based services.",
         icon: "📍",
       },
       {
-        title: "Health Reminders & Scheduling",
+        title: "Lab Result Analysis",
         description:
-          "Allows users to set reminders for health checkups and lifestyle routines.",
-        icon: "⏰",
+          "Upload lab reports for automatic data extraction and explanation.",
+        icon: "📄",
       },
     ],
 
@@ -775,25 +775,19 @@ export const projects: Project[] = [
 
     keyFeatures: [
       {
-        title: "Voice Based Emotion Detection",
+        title: "MyEmoTalk",
         description:
-          "Analyzes voice recordings to detect emotional conditions and mental well being of pregnant mothers.",
+          "Voice based emotion detection with personalized nutrition recommendations for pregnant mothers.",
         icon: "🎙️",
       },
       {
-        title: "Personalized Nutrition Recommendations",
-        description:
-          "Provides food and nutrition suggestions tailored to emotional conditions and pregnancy stages.",
-        icon: "🥗",
-      },
-      {
-        title: "Pregnancy Monitoring",
+        title: "MyBaby",
         description:
           "Helps mothers track pregnancy progress and key health indicators throughout each trimester.",
         icon: "🤰",
       },
       {
-        title: "Emotional Health Companion",
+        title: "MyDoc",
         description:
           "Acts as a supportive digital companion by combining emotional insights with actionable guidance.",
         icon: "🧠",
