@@ -7,6 +7,7 @@ export const projects: Project[] = [
     role: "Mobile Developer",
     description:
       "An AI-powered Android app that helps parents understand children with autism through emotion based activity analysis, awarded 1st place at the Hology Software Development competition.",
+    githubUrl: "https://github.com/muktiabdii/weaveon-app",
     coverImage: "/images/weaveon-cover-4.png",
     category: "Mobile Development",
 
@@ -133,6 +134,7 @@ export const projects: Project[] = [
     role: "Mobile Developer",
     description:
       "An AI-powered mobile application that analyzes voice input to detect emotional distress in postpartum mothers and provide early mental health support, awarded 1st place at the SLASHCOM Hackathon.",
+    githubUrl: "https://github.com/gitaufar/swaraibu-app",
     coverImage: "/images/swaraibu-cover-2.png",
     category: "Mobile Development",
 
@@ -247,6 +249,7 @@ export const projects: Project[] = [
     role: "Backend Developer",
     description:
       "A web based platform that enables users to discover, review, and communicate about disability friendly public facilities to support inclusive mobility.",
+    githubUrl: "https://github.com/muktiabdii/easygo-web",
     coverImage: "/images/easygo-cover.png",
     category: "Web Development",
 
@@ -377,6 +380,7 @@ export const projects: Project[] = [
     role: "Backend Developer",
     description:
       "A web based platform that handles secure transactions and verification processes through payment gateway integration and blockchain based validation.",
+    githubUrl: "https://github.com/adenugii/Sentinel",
     coverImage: "/images/sentinel-cover-2.png",
     category: "Web Development",
 
@@ -492,7 +496,7 @@ export const projects: Project[] = [
     role: "Product Manager",
     description:
       "An AI-powered mobile application for early diabetes risk detection through nail and tongue image analysis, selected as a finalist at GEMASTIK XVIII.",
-
+    githubUrl: "https://github.com/dzikrimr/prediai-app",
     coverImage: "/images/prediai-cover.png",
     category: "Product Management",
 
@@ -620,7 +624,7 @@ export const projects: Project[] = [
     role: "Mobile Developer",
     description:
       "A mobile based waste management application that encourages recycling through point rewards, marketplace transactions, and community driven sustainability in Malang City.",
-
+    githubUrl: "https://github.com/muktiabdii/sabi-app",
     coverImage: "/images/sabi-cover-4.png",
     category: "Mobile Development",
 
@@ -736,7 +740,7 @@ export const projects: Project[] = [
     role: "Mobile Developer",
     description:
       "An AI-powered mobile application that supports pregnant mothers through voice based emotion detection and personalized health monitoring. This project received a Best Deploy nomination at HackJam 2025.",
-
+    githubUrl: "https://github.com/muktiabdii/nurtura-app",
     coverImage: "/images/nurtura-cover-4.png",
     category: "Mobile Development",
 
@@ -858,7 +862,7 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     description:
       "A mobile application that helps users discover, join, and manage community and campus events through an integrated mobile and backend system.",
-
+    githubUrl: "https://github.com/muktiabdii/eventease-app",
     coverImage: "/images/eventease-cover-2.png",
     category: "Mobile Development",
 
@@ -976,7 +980,7 @@ export const projects: Project[] = [
     role: "Mobile Developer",
     description:
       "A mobile application that helps reduce food waste by connecting UMKM with consumers through discounted surplus food, flash sales, and surprise boxes.",
-
+    githubUrl: "https://github.com/Raion-App-Programmer/ZELOW",
     coverImage: "/images/zelow-cover.png",
     category: "Mobile Development",
 

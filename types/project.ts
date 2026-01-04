@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   role: string;
   description: string;
+  githubUrl: string;
   coverImage: string;
   category: string;
 

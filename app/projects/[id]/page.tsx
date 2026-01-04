@@ -45,7 +45,7 @@ export default function ProjectDetailPage({
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-orange-50/50 to-white overflow-hidden" data-aos="fade-up">
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-b from-orange-50/50 to-white overflow-hidden">
         <div className="absolute top-20 right-10 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-orange-100/30 rounded-full blur-3xl" />
 
@@ -81,12 +81,32 @@ export default function ProjectDetailPage({
                   <div className="text-sm text-gray-600">Key Features</div>
                 </div>
               </div>
+
+              {/* GitHub Link */}
+              {projectData.githubUrl && (
+                <div className="pt-6">
+                  <a
+                    href={projectData.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>View on GitHub</span>
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              )}
             </div>
 
             <div className="lg:col-span-7">
               <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl">
                 <Image src={projectData.coverImage} alt={projectData.title} fill className="object-cover" priority />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
             </div>
           </div>
@@ -94,7 +114,7 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Project Overview - TWO COLUMN */}
-      <section className="py-32 px-6 bg-white" data-aos="fade-up" data-aos-delay="200">
+      <section className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="flex items-end justify-between border-b-2 border-gray-900 pb-6">
@@ -102,7 +122,7 @@ export default function ProjectDetailPage({
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Understanding the Context
                 </p>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">Overview</h2>
+                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">Overview</h2>
               </div>
               <p className="text-gray-500 text-lg max-w-xs leading-relaxed hidden md:block">
                 The problem we aimed to solve and project purpose
@@ -126,7 +146,7 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Role & Responsibilities - FULL WIDTH GRID */}
-      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white" data-aos="fade-up" data-aos-delay="100">
+      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="flex items-end justify-between border-b-2 border-gray-900 pb-6">
@@ -134,7 +154,7 @@ export default function ProjectDetailPage({
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   My Contributions
                 </p>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">Responsibilities</h2>
+                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">Responsibilities</h2>
               </div>
               <p className="text-gray-500 text-lg max-w-xs leading-relaxed hidden md:block">
                 What I personally worked on in this project
@@ -158,7 +178,7 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Tech Stack - FULL WIDTH */}
-      <section className="py-32 px-6 bg-white" data-aos="fade-up" data-aos-delay="200">
+      <section className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="flex items-end justify-between border-b-2 border-gray-900 pb-6">
@@ -166,7 +186,7 @@ export default function ProjectDetailPage({
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Technologies Used
                 </p>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">Tech Stack</h2>
+                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">Tech Stack</h2>
               </div>
               <p className="text-gray-500 text-lg max-w-xs leading-relaxed hidden md:block">
                 Tools and frameworks powering this project
@@ -233,7 +253,7 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Key Features - FULL WIDTH */}
-      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white" data-aos="fade-up" data-aos-delay="100">
+      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="flex items-end justify-between border-b-2 border-gray-900 pb-6">
@@ -241,7 +261,7 @@ export default function ProjectDetailPage({
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Core Functionality
                 </p>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">Features</h2>
+                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">Features</h2>
               </div>
               <p className="text-gray-500 text-lg max-w-xs leading-relaxed hidden md:block">
                 Main capabilities that make this project unique
@@ -265,13 +285,13 @@ export default function ProjectDetailPage({
       </section>
 
       {/* UI Screenshots - CENTERED */}
-      <section className="py-32 px-6 bg-white" data-aos="fade-up" data-aos-delay="200">
+      <section className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <p className="text-sm font-medium text-orange-500 mb-4 tracking-widest uppercase">
               Visual Design
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight mb-6">UI Showcase</h2>
+            <h2 className="text-7xl font-bold text-gray-900 tracking-tight mb-6">UI Showcase</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Interface design and user experience highlights
             </p>
@@ -286,7 +306,7 @@ export default function ProjectDetailPage({
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
 
               <div className="absolute inset-0 flex items-center justify-between px-6">
                 <button
@@ -345,7 +365,7 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Challenges - TWO COLUMN */}
-      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white" data-aos="fade-up" data-aos-delay="100">
+      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="flex items-end justify-between border-b-2 border-gray-900 pb-6">
@@ -353,7 +373,7 @@ export default function ProjectDetailPage({
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">
                   Technical Journey
                 </p>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">Challenges</h2>
+                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">Challenges</h2>
               </div>
               <p className="text-gray-500 text-lg max-w-xs leading-relaxed hidden md:block">
                 Obstacles faced and lessons learned along the way
@@ -373,13 +393,13 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Outcome - CENTERED */}
-      <section className="py-32 px-6 bg-white" data-aos="fade-up" data-aos-delay="200">
+      <section className="py-32 px-6 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <p className="text-sm font-medium text-orange-500 mb-4 tracking-widest uppercase">
               Results & Achievements
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight mb-6">Impact</h2>
+            <h2 className="text-7xl font-bold text-gray-900 tracking-tight mb-6">Impact</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Measurable outcomes and project success metrics
             </p>
@@ -399,13 +419,13 @@ export default function ProjectDetailPage({
       </section>
 
       {/* Future Improvements - FULL WIDTH */}
-      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white" data-aos="fade-up" data-aos-delay="100">
+      <section className="py-32 px-6 bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="container mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="flex items-end justify-between border-b-2 border-gray-900 pb-6">
               <div>
                 <p className="text-sm font-medium text-orange-500 mb-2 tracking-widest uppercase">Next Steps</p>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight">Future Plans</h2>
+                <h2 className="text-7xl font-bold text-gray-900 tracking-tight">Future Plans</h2>
               </div>
               <p className="text-gray-500 text-lg max-w-xs leading-relaxed hidden md:block">
                 Potential enhancements and upcoming features
