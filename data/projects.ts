@@ -498,7 +498,7 @@ export const projects: Project[] = [
       "An AI-powered mobile application for early diabetes risk detection through nail and tongue image analysis, selected as a finalist at GEMASTIK XVIII.",
     githubUrl: "https://github.com/dzikrimr/prediai-app",
     coverImage: "/images/prediai-cover.png",
-    category: "Product Management",
+    category: "Mobile Development",
 
     overview: {
       problem:
