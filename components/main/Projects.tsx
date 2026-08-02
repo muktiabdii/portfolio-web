@@ -103,7 +103,7 @@ export default function Projects() {
 
                     {/* CTA Link */}
                     <Link
-                      href={`/projects/${project.id}`}
+                      href={`/projects/${project.slug}`}
                       className="group/link inline-flex items-center gap-3 text-gray-900 font-semibold text-lg hover:text-orange-500 transition-colors duration-300"
                     >
                       <span className="border-b-2 border-gray-900 group-hover/link:border-orange-500 transition-colors duration-300">

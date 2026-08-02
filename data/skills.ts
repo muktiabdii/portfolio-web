@@ -21,13 +21,14 @@ export const skills: Skill[] = [
     title: "Backend & API",
     subtitle: "Scalable Services",
     description:
-      "Experience building backend services and APIs with attention to structure, data flow, and performance considerations.",
+      "Experience building backend services and APIs with attention to architecture, data flow, authentication, and cloud infrastructure.",
     icon: "⚙️",
     color: "green",
     items: [
-      "FastAPI for ML/AI Services",
       "RESTful API Design",
-      "Database Design & Optimization",
+      "ERD & Database Schema",
+      "DevOps & Cloud Deployment",
+      "Authentication & Security",
     ],
   },
   {

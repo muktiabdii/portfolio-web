@@ -15,8 +15,8 @@ export const techStacks: TechStack[] = [
   },
   {
     id: 3,
-    image: "/images/javascript-logo.png",
-    name: "JavaScript",
+    image: "/images/typescript-logo.webp",
+    name: "TypeScript",
     category: "Backend",
   },
   {
@@ -27,33 +27,33 @@ export const techStacks: TechStack[] = [
   },
   {
     id: 5,
-    image: "/images/python-logo.png",
-    name: "Python",
+    image: "/images/go-logo.png",
+    name: "Go",
     category: "Backend",
   },
   {
     id: 6,
-    image: "/images/firebase-logo.png",
-    name: "Firebase",
-    category: "Backend",
-  },
-  {
-    id: 7,
-    image: "/images/mysql-logo.svg",
-    name: "MySQL",
+    image: "/images/postgresql-logo.png",
+    name: "PostgreSQL",
     category: "Database",
   },
   {
-    id: 8,
+    id: 7,
     image: "/images/mongodb-logo.png",
     name: "MongoDB",
     category: "Database",
   },
   {
+    id: 8,
+    image: "/images/aws-logo.webp",
+    name: "AWS",
+    category: "DevOps",
+  },
+  {
     id: 9,
-    image: "/images/postgresql-logo.png",
-    name: "PostgreSQL",
-    category: "Database",
+    image: "/images/docker-logo.png",
+    name: "Docker",
+    category: "DevOps",
   },
   {
     id: 10,
@@ -63,14 +63,14 @@ export const techStacks: TechStack[] = [
   },
   {
     id: 11,
-    image: "/images/postman-logo.png",
-    name: "Postman",
+    image: "/images/gitlab-logo.webp",
+    name: "GitLab",
     category: "Tools",
   },
   {
     id: 12,
-    image: "/images/figma-logo.png",
-    name: "Figma",
+    image: "/images/postman-logo.png",
+    name: "Postman",
     category: "Tools",
   },
 ];

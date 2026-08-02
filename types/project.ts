@@ -1,9 +1,10 @@
 export interface Project {
   id: number;
+  slug: string;
   title: string;
   role: string;
   description: string;
-  githubUrl: string;
+  githubUrl: string | null;
   coverImage: string;
   category: string;
 

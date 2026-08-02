@@ -20,15 +20,6 @@ export default function Hero() {
 
   return (
     <section className="relative pt-28 pb-20 px-6 overflow-hidden">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
-        <div
-          className="absolute top-40 right-20 w-3 h-3 bg-orange-300 rounded-full animate-pulse"
-          style={{ animationDelay: "75ms" }}
-        />
-      </div>
-
       <div className="container mx-auto max-w-7xl">
         <div
           className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50/70 via-white to-orange-50/30 p-6 md:p-12 shadow-xl hover:shadow-2xl transition-all duration-500"
@@ -65,18 +56,17 @@ export default function Hero() {
               </div>
 
               <div className="space-y-2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 leading-tight">
                   I&apos;m Abdi,
                 </h1>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent">
-                  Mobile Developer
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-clip-text text-transparent leading-tight">
+                  Software Engineer
                 </h1>
                 <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full" />
               </div>
 
               <p className="text-gray-600 text-lg leading-relaxed">
-                Student who focusing on mobile development, with
-                hands-on experience building backend APIs for real projects.
+                Student who enjoys working across the stack, from database schema and backend APIs to native Android apps.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">

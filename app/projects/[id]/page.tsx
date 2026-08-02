@@ -12,9 +12,8 @@ export default function ProjectDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = use(params);
-  const projectId = Number(id);
 
-  const projectData = projects.find((p) => p.id === projectId);
+  const projectData = projects.find((p) => p.slug === id || p.id === Number(id));
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   if (!projectData) {

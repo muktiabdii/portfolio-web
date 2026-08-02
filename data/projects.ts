@@ -1,8 +1,16 @@
 import { Project } from "@/types/project";
 
+const toSlug = (value: string) =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
 export const projects: Project[] = [
   {
     id: 1,
+    slug: toSlug("WeaveOn"),
     title: "WeaveOn: AI-Powered Child Development App",
     role: "Mobile Developer",
     description:
@@ -130,6 +138,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    slug: toSlug("SwaraIbu"),
     title: "SwaraIbu: AI-Powered Voice Based Mental Health Support for Mothers",
     role: "Mobile Developer",
     description:
@@ -245,6 +254,384 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    slug: toSlug("ICCN Research Ecosystem"),
+    title: "ICCN Research Ecosystem: Research Platform & CMS",
+    role: "Backend Developer",
+    description:
+      "A research platform for ICCN featuring a public portal and a CMS admin panel, built with a strict layered backend architecture supporting both internal CMS users and SSO-authenticated researchers.",
+    githubUrl: "https://github.com/muktiabdii/iccn-backend",
+    coverImage: "/images/iccn-cover.png",
+    category: "Backend Development",
+
+    overview: {
+      problem:
+        "ICCN needed a unified platform where researchers could access and manage research-related content through SSO, while internal admins needed a secure CMS to manage publications, funding data, and site content.",
+      purpose:
+        "This project aims to build a research ecosystem with a public-facing portal and an admin panel, supporting two distinct user types, CMS admins and SSO researchers. The platform is further supported by an AI pipeline that evaluates submitted research applications and scrapes external sources for up-to-date funding opportunities.",
+    },
+
+    responsibilities: [
+      "Designed and built backend APIs using Next.js with a layered architecture",
+      "Implemented dual authentication flows: internal JWT for CMS users and Keycloak OAuth2 Authorization Code with PKCE for SSO researchers",
+      "Built supporting content APIs for professors, testimonials, FAQs, journals, and institutions, along with an S3-based file upload system",
+      "Developed core research application APIs, including CRUD, rate limiting, and team member handling",
+      "Implemented CMS overview metrics, and page settings architecture for site-wide configuration",
+    ],
+
+    techStack: {
+      frontend: ["Next.js", "TypeScript"],
+      backend: ["Next.js", "TypeScript", "Prisma ORM", "PostgreSQL"],
+      tools: ["AWS S3", "Keycloak", "JWKS", "Postman"],
+      ai: ["AI Research Evaluation Pipeline", "Automated Funding Data Scraping (AI Engineer team-owned)"],
+    },
+
+    keyFeatures: [
+      {
+        title: "Dual Authentication System",
+        description:
+          "Supports two distinct user types. CMS admins via email/password with internal JWTs, and SSO researchers via Keycloak OAuth2 PKCE flow with JWKS token verification.",
+        icon: "🔐",
+      },
+      {
+        title: "Research Application Management",
+        description:
+          "Provides full CRUD for research applications with status management, rate limiting, team member handling, and category validation.",
+        icon: "📚",
+      },
+      {
+        title: "CMS Admin Panel",
+        description:
+          "Powers a dedicated admin panel for managing professors, journals, funding data, testimonials, and site-wide page settings.",
+        icon: "🛠️",
+      },
+       {
+        title: "AI-Powered Research Evaluation & Funding Discovery",
+        description:
+          "Integrates with an AI pipeline, built by a separate AI Engineer team, that automatically evaluates submitted research applications and scrapes external sources to surface up-to-date funding opportunities.",
+        icon: "🧠",
+      },
+    ],
+
+    screenshots: [
+      {
+        url: "/images/iccn/ui-1.png",
+        caption:
+          "Research proposal submission page to submit research applications.",
+      },
+      {
+        url: "/images/iccn/ui-2.png",
+        caption:
+          "Funding catalog page displaying available funding opportunities.",
+      },
+      {
+        url: "/images/iccn/ui-3.png",
+        caption:
+          "Admin dashboard displaying key research metrics, proposal statuses, and recent submission activities.",
+      },
+      {
+        url: "/images/iccn/ui-4.png",
+        caption:
+          "Site setting page for managing general platform configurations and branding assets.",
+      },
+    ],
+
+    challenges: [
+      {
+        challenge:
+          "Supporting two fundamentally different user types, within a single authentication system.",
+        learning:
+          "Implemented separate JWT issuance paths for each user type, with a unified /api/auth/cms/me endpoint that differentiates SSO researchers (merging data from an external dashboard API) from CMS users.",
+      },
+      {
+        challenge:
+          "Handling repetitive page-level settings without duplicating repository logic.",
+        learning:
+          "Built a generic PageSettingRepository as a singleton factory using a fixed ID per page, reducing repeated boilerplate across settings modules.",
+      },
+      {
+        challenge:
+          "Keeping list-style array fields consistent during updates.",
+        learning:
+          "Adopted an atomic replace pattern, deleting old entries and inserting new ones within a single transaction rather than performing partial updates.",
+      },
+      {
+        challenge:
+          "Supporting both UUID-based and slug-based lookups on the same detail routes.",
+        learning:
+          "Implemented an isUuid() helper to dynamically determine the lookup strategy, allowing a single route to serve both CMS and public use cases.",
+      },
+    ],
+
+    outcome: {
+      type: "💼 Internship Achievement",
+      metrics: [
+        "🏗️ Delivered a multi-phase backend system spanning authentication, core research APIs, and supporting content modules",
+        "🔗 Successfully integrated Keycloak SSO alongside a separate internal CMS authentication system",
+      ],
+    },
+
+    futureImprovements: [
+      "Add automated testing coverage for repository and service layers",
+      "Implement caching for frequently accessed public endpoints such as stats and journals",
+      "Expand rate limiting to cover additional high-traffic endpoints",
+      "Introduce audit logging for CMS admin actions",
+      "Optimize overview metrics queries further as data volume grows",
+    ],
+  },
+  {
+    id: 4,
+    slug: toSlug("Eppy"),
+    title: "Eppy: Smart Helpdesk Chatbot System",
+    role: "Backend Developer",
+    description:
+      "A capstone project delivering a smart helpdesk chatbot system for PT Epson Indonesia Industry, combining AI-powered conversations with a full ticketing and analytics platform for admins.",
+    githubUrl: "https://github.com/Eppy-Team/eppy-be",
+    coverImage: "/images/eppy-cover.png",
+    category: "Web Development",
+
+    overview: {
+      problem:
+        "PT Epson Indonesia Industry needed a way to handle repetitive internal support questions efficiently, while still giving employees a clear path to escalate unresolved issues to human admins.",
+      purpose:
+        "This project aims to build a smart helpdesk system where an AI chatbot answers common questions using company knowledge documents, while unresolved cases can be escalated into trackable tickets, with a dashboard for admins to monitor conversations, feedback, and ticket performance.",
+    },
+
+    responsibilities: [
+      "Designed and built the entire backend using NestJS with a layered architecture",
+      "Built the AiService as an HTTP client to a separate Python/LangChain AI microservice",
+      "Implemented file handling features, including PDF/image uploads to AWS S3",
+      "Built a ticketing workflow with admin response handling, and automated email notifications via AWS SES",
+      "Developed an analytics dashboard with exportable PDF and Excel reports",
+    ],
+
+    techStack: {
+      frontend: ["Next.js", "TypeScript"],
+      backend: ["NestJS", "TypeScript", "Prisma ORM", "PostgreSQL"],
+      tools: [
+        "AWS S3",
+        "AWS SES",
+        "PDFKit",
+        "ExcelJS",
+        "Multer",
+        "Postman",
+        "GitHub",
+      ],
+      ai: ["LangChain", "Retrieval-augmented Generation"],
+    },
+
+    keyFeatures: [
+      {
+        title: "AI Chat Integration",
+        description:
+          "Connects to a separate Python/LangChain AI microservice via HTTP to answer employee questions.",
+        icon: "🤖",
+      },
+      {
+        title: "Knowledge Base Management",
+        description:
+          "Allows PDF documents to be uploaded to S3 and asynchronously embedded for the AI service.",
+        icon: "📄",
+      },
+      {
+        title: "Ticketing System",
+        description:
+          "Lets users manually create tickets after an AI conversation, with admin response, email notifications.",
+        icon: "🎫",
+      },
+      {
+        title: "Admin Dashboard & Reports",
+        description:
+          "Provides chatbot and ticket analytics with exportable PDF and Excel reports, including satisfaction metrics from user feedback.",
+        icon: "📊",
+      },
+    ],
+
+    screenshots: [
+      {
+        url: "/images/eppy/ui-1.png",
+        caption:
+          "Chat interface where employees interact with the AI-powered helpdesk assistant.",
+      },
+      {
+        url: "/images/eppy/ui-2.png",
+        caption:
+          "Ticket detail view showing admin response flow.",
+      },
+      {
+        url: "/images/eppy/ui-3.png",
+        caption: "Admin dashboard displaying chatbot.",
+      },
+      {
+        url: "/images/eppy/ui-4.png",
+        caption:
+          "Admin dashboard displaying ticket analytics.",
+      },
+    ],
+
+    challenges: [
+      {
+        challenge:
+          "Configuring secure connectivity between multiple AWS services (EC2, S3, RDS) with proper IAM roles and security groups.",
+        learning:
+          "Isolated configuration per service and centralized environment variable management to ensure smooth inter-service communication.",
+      },
+      {
+        challenge:
+          "Inconsistent application behavior between local development and production environments, causing unexpected bugs after deployment.",
+        learning:
+          "Adopted Docker for environment consistency and set up CI/CD with GitHub Actions to automate testing before deployment.",
+      },
+      {
+        challenge:
+          "Combining the AI and backend databases into a single entity early on, leading to data redundancy and performance issues as RAG data grew.",
+        learning:
+          "Decoupled the databases into two independent entities, allowing each service to scale separately.",
+      },
+      {
+        challenge:
+          "Running backend and AI services on the same EC2 instance, causing resource contention and instability under load.",
+        learning:
+          "Migrated to a multi-instance architecture, separating backend and AI services onto distinct EC2 instances.",
+      },
+    ],
+
+    outcome: {
+      type: "🎓 Capstone Project Achievement",
+      metrics: [
+        "🏢 Delivered a functional helpdesk system for a real industry partner, PT Epson Indonesia Industry",
+        "🔗 Successfully integrated a NestJS backend with a separate LangChain-based AI microservice",
+        "📊 Built a full admin analytics dashboard with exportable PDF and Excel reports"
+      ],
+    },
+
+    futureImprovements: [
+      "Add automated activity logging for audit trail purposes (currently deferred)",
+      "Introduce role-based analytics views for different admin levels",
+      "Improve AI response accuracy through expanded knowledge base coverage",
+      "Add real-time notifications for new tickets and admin responses",
+      "Implement caching for frequently accessed dashboard analytics",
+    ],
+  },
+  {
+    id: 5,
+    slug: toSlug("Sentinel"),
+    title: "Sentinel: Blockchain Based Marketplace",
+    role: "Backend Developer",
+    description:
+      "A web based platform that handles secure transactions and verification processes through payment gateway integration and blockchain based validation.",
+    githubUrl: "https://github.com/adenugii/Sentinel",
+    coverImage: "/images/sentinel-cover-2.png",
+    category: "Web Development",
+
+    overview: {
+      problem:
+        "Digital transaction systems often face challenges in ensuring secure payments, transparent verification, and reliable record tracking, especially when integrating emerging technologies like blockchain.",
+      purpose:
+        "Sentinel aims to provide a secure and reliable transaction platform by combining conventional payment gateways with blockchain based verification mechanisms.",
+    },
+
+    responsibilities: [
+      "Developed backend services using Express.js for handling core application logic",
+      "Integrated Midtrans payment gateway for secure and reliable transaction processing",
+      "Designed and implemented payment flow validation and callback handling",
+      "Collaborated with blockchain developers to align API contracts and data flow",
+      "Handled environment configuration, API testing, and debugging during development",
+    ],
+
+    techStack: {
+      frontend: ["Next.js", "Typescript"],
+      backend: ["Express.js", "PostgreSQL"],
+      tools: [
+        "VSCode",
+        "Midtrans",
+        "Ethereum",
+        "Postman",
+        "GitHub",
+        "Figma",
+        "Vercel",
+        "Railway",
+      ],
+    },
+
+    keyFeatures: [
+      {
+        title: "Secure Payment Processing",
+        description:
+          "Handles online payments using Midtrans with proper validation, callbacks, and transaction status handling.",
+        icon: "💳",
+      },
+      {
+        title: "Transaction Verification",
+        description:
+          "Ensures each transaction is properly verified before being processed further in the system.",
+        icon: "🔐",
+      },
+      {
+        title: "Blockchain Based Validation",
+        description:
+          "Supports integration with blockchain components to provide transparent and immutable verification records.",
+        icon: "⛓",
+      },
+      {
+        title: "Transaction History",
+        description:
+          "Stores and manages transaction records for traceability and auditing purposes.",
+        icon: "📄",
+      },
+    ],
+
+    screenshots: [
+      {
+        url: "/images/sentinel/ui-1.png",
+        caption: "Product listing page displaying all available items.",
+      },
+      {
+        url: "/images/sentinel/ui-2.png",
+        caption:
+          "Detailed product view with transaction and verification information.",
+      },
+      {
+        url: "/images/sentinel/ui-3.png",
+        caption:
+          "Warranty detail page showing ownership and verification status.",
+      },
+    ],
+
+    challenges: [
+      {
+        challenge:
+          "Using Express.js for backend development for the first time in a real project.",
+        learning:
+          "Gained foundational understanding of Express.js architecture, routing, and middleware usage.",
+      },
+      {
+        challenge:
+          "Integrating Midtrans payment gateway with proper transaction flow and callback handling.",
+        learning:
+          "Learned how real world payment gateways work, including payment status handling, security considerations, and API integration.",
+      },
+    ],
+
+    outcome: {
+      type: "🎓 Academic Project",
+      metrics: [
+        "✅ Successfully implemented a working payment gateway integration using Midtrans",
+        "🔗 Connected backend services with blockchain based verification components",
+        "🧠 Strengthened backend fundamentals in Node.js and Express.js",
+      ],
+    },
+
+    futureImprovements: [
+      "Enhance payment security with additional verification layers and fraud detection",
+      "Implement comprehensive logging and monitoring for transaction activities",
+      "Add automated testing for payment and verification workflows",
+      "Improve scalability and error handling for production level deployment",
+      "Provide an admin dashboard for transaction analytics and monitoring",
+    ],
+  },
+  {
+    id: 6,
+    slug: toSlug("EasyGo"),
     title: "EasyGo: Accessible Places Web Platform",
     role: "Backend Developer",
     description:
@@ -375,123 +762,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
-    title: "Sentinel: Blockchain Based Marketplace",
-    role: "Backend Developer",
-    description:
-      "A web based platform that handles secure transactions and verification processes through payment gateway integration and blockchain based validation.",
-    githubUrl: "https://github.com/adenugii/Sentinel",
-    coverImage: "/images/sentinel-cover-2.png",
-    category: "Web Development",
-
-    overview: {
-      problem:
-        "Digital transaction systems often face challenges in ensuring secure payments, transparent verification, and reliable record tracking, especially when integrating emerging technologies like blockchain.",
-      purpose:
-        "Sentinel aims to provide a secure and reliable transaction platform by combining conventional payment gateways with blockchain based verification mechanisms.",
-    },
-
-    responsibilities: [
-      "Developed backend services using Express.js for handling core application logic",
-      "Integrated Midtrans payment gateway for secure and reliable transaction processing",
-      "Designed and implemented payment flow validation and callback handling",
-      "Collaborated with blockchain developers to align API contracts and data flow",
-      "Handled environment configuration, API testing, and debugging during development",
-    ],
-
-    techStack: {
-      frontend: ["Next.js", "Typescript"],
-      backend: ["Express.js", "PostgreSQL"],
-      tools: [
-        "VSCode",
-        "Midtrans",
-        "Ethereum",
-        "Postman",
-        "GitHub",
-        "Figma",
-        "Vercel",
-        "Railway",
-      ],
-    },
-
-    keyFeatures: [
-      {
-        title: "Secure Payment Processing",
-        description:
-          "Handles online payments using Midtrans with proper validation, callbacks, and transaction status handling.",
-        icon: "💳",
-      },
-      {
-        title: "Transaction Verification",
-        description:
-          "Ensures each transaction is properly verified before being processed further in the system.",
-        icon: "🔐",
-      },
-      {
-        title: "Blockchain Based Validation",
-        description:
-          "Supports integration with blockchain components to provide transparent and immutable verification records.",
-        icon: "⛓",
-      },
-      {
-        title: "Transaction History",
-        description:
-          "Stores and manages transaction records for traceability and auditing purposes.",
-        icon: "📄",
-      },
-    ],
-
-    screenshots: [
-      {
-        url: "/images/sentinel/ui-1.png",
-        caption: "Product listing page displaying all available items.",
-      },
-      {
-        url: "/images/sentinel/ui-2.png",
-        caption:
-          "Detailed product view with transaction and verification information.",
-      },
-      {
-        url: "/images/sentinel/ui-3.png",
-        caption:
-          "Warranty detail page showing ownership and verification status.",
-      },
-    ],
-
-    challenges: [
-      {
-        challenge:
-          "Using Express.js for backend development for the first time in a real project.",
-        learning:
-          "Gained foundational understanding of Express.js architecture, routing, and middleware usage.",
-      },
-      {
-        challenge:
-          "Integrating Midtrans payment gateway with proper transaction flow and callback handling.",
-        learning:
-          "Learned how real world payment gateways work, including payment status handling, security considerations, and API integration.",
-      },
-    ],
-
-    outcome: {
-      type: "🎓 Academic Project",
-      metrics: [
-        "✅ Successfully implemented a working payment gateway integration using Midtrans",
-        "🔗 Connected backend services with blockchain based verification components",
-        "🧠 Strengthened backend fundamentals in Node.js and Express.js",
-      ],
-    },
-
-    futureImprovements: [
-      "Enhance payment security with additional verification layers and fraud detection",
-      "Implement comprehensive logging and monitoring for transaction activities",
-      "Add automated testing for payment and verification workflows",
-      "Improve scalability and error handling for production level deployment",
-      "Provide an admin dashboard for transaction analytics and monitoring",
-    ],
-  },
-  {
-    id: 5,
+    id: 7,
+    slug: toSlug("PrediAI"),
     title: "PrediAI: AI-Powered Diabetes Early Detection App",
     role: "Product Manager",
     description:
@@ -619,7 +891,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 8,
+    slug: toSlug("SABI"),
     title: "SABI: Smart Waste Management App",
     role: "Mobile Developer",
     description:
@@ -735,7 +1008,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 9,
+    slug: toSlug("Nurtura"),
     title: "Nurtura: Pregnancy Support App",
     role: "Mobile Developer",
     description:
@@ -851,7 +1125,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 10,
+    slug: toSlug("EventEase"),
     title: "EventEase: Event Management & Discovery Platform",
     role: "Full Stack Developer",
     description:
@@ -969,7 +1244,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 11,
+    slug: toSlug("ZELOW"),
     title: "ZELOW: Zero Leftovers Waste App",
     role: "Mobile Developer",
     description:

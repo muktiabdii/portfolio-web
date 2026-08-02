@@ -15,10 +15,8 @@ export default function Introduction() {
 
         {/* Description */}
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
-          I enjoy building mobile applications by understanding both the
-          user facing experience and the systems behind it. From clean
-          architecture on the client side to well structured APIs on the
-          backend.
+          I enjoy working across the stack, from designing well-structured backend APIs to building clean, 
+          user-facing Android applications. I care about how systems are architected just as much as how they're experienced.
         </p>
       </div>
     </section>

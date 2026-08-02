@@ -40,7 +40,7 @@ export default function AboutMePage() {
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                   <span className="font-bold text-gray-900">
-                    Open for Internship
+                    Open for Work
                   </span>
                 </div>
               </div>
@@ -66,11 +66,12 @@ export default function AboutMePage() {
                 <p>
                   I'm a{" "}
                   <strong className="text-gray-900">
-                    Mobile and Backend Developer
+                    Software Engineer
                   </strong>{" "}
-                  focusing on Android and API-driven applications. Currently a
+                  focusing on mobile and backend development. Currently a
                   student at Universitas Brawijaya, passionate about building
-                  meaningful digital products.
+                  meaningful digital products from the database up to the
+                  screen.
                 </p>
                 <p>
                   I have completed{" "}
@@ -79,18 +80,19 @@ export default function AboutMePage() {
                   </strong>{" "}
                   and participated in{" "}
                   <strong className="text-gray-900">5+ competitions</strong>. I
-                  enjoy building mobile applications that solve real-world
-                  problems through clean architecture, thoughtful feature
-                  design, and reliable backend integration.
+                  enjoy working across the stack, from designing ERDs and
+                  well-structured APIs to building clean, native Android
+                  applications.
                 </p>
                 <p>
                   I enjoy working on{" "}
                   <em className="text-orange-600">
-                    problem solving tasks, building mobile apps, and designing
-                    clean, maintainable systems.
+                    problem solving tasks, system design, and building
+                    reliable, user-facing applications.
                   </em>{" "}
-                  I&apos;m especially interested in how backend services and
-                  APIs power great user experiences.
+                  I&apos;m especially interested in how solid backend
+                  architecture and thoughtful mobile design come together to
+                  power great user experiences.
                 </p>
               </div>
 
@@ -109,6 +111,13 @@ export default function AboutMePage() {
                   className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-orange-500 hover:bg-orange-50 transition-all duration-300"
                 >
                   GitHub
+                </Link>
+                <Link
+                  href="https://gitlab.com/muktiabdii"
+                  target="_blank"
+                  className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-orange-500 hover:bg-orange-50 transition-all duration-300"
+                >
+                  GitLab
                 </Link>
                 <Link
                   href="https://drive.google.com/file/d/1re-Nap5dYh-XlGvvohu2q3iM6YmCzKl4/view?usp=drive_link"
