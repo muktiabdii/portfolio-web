@@ -12,7 +12,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 2,
     name: "M. Gilang Hafizh",
-    role: "Information Technology Intern at PT. Badak NGL",
+    role: "Information Technology Intern at PT Badak NGL",
     avatar: "/images/gilang-picture.jpg",
     message:
       "Working with Abdi has been a great experience. He combines strong technical skills with excellent people skills, making collaboration smooth and productive. His grit and work ethic stand out, especially when handling tight deadlines.",

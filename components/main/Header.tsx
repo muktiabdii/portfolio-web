@@ -56,7 +56,7 @@ export default function Header() {
 
             {/* Resume */}
             <Link
-              href="https://drive.google.com/file/d/1bg5azUVv4IYleqML0AKHv_j1XqIPUDDy/view?usp=sharing"
+              href="https://drive.google.com/file/d/1hAEtgc9bcZJcBMEddQoyiHbhJlnxHF2a/view?usp=sharing"
               target="_blank"
               className="text-lg font-medium text-gray-700 hover:text-orange-500 transition"
             >
@@ -139,7 +139,7 @@ export default function Header() {
 
               {/* Resume */}
               <Link
-                href="https://drive.google.com/file/d/1bg5azUVv4IYleqML0AKHv_j1XqIPUDDy/view?usp=sharing"
+                href="https://drive.google.com/file/d/1hAEtgc9bcZJcBMEddQoyiHbhJlnxHF2a/view?usp=sharing"
                 target="_blank"
                 className="text-lg font-medium text-gray-700 hover:text-orange-500 transition"
                 onClick={() => setIsMenuOpen(false)}
